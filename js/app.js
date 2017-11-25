@@ -8,6 +8,12 @@ function makeGrid() {
     // pick and change cel color
     $('td').click(function() {
         var color = $('#colorPicker').val();
+        if (rgb2hex($(this).css('background-color')) === color) {
+            $(this).css({
+                'background-color': 'white'
+            });
+            return;
+        }
         $(this).css({
             'background-color': color
         });
