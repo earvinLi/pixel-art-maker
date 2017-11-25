@@ -5,4 +5,11 @@ function makeGrid() {
             $('tr:last').append('<td class="white"></td>');
         }
     }
+    // pick and change cel color
+    $('td').click(function() {
+        var color = $('#colorPicker').val();
+        $(this).css({
+            'background-color': color
+        });
+    });
 }
