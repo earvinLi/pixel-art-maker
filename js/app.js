@@ -19,6 +19,7 @@ function makeGrid() {
   // pick and change cel color
   $('td').click(function() {
       var color = $('#colorPicker').val();
+      // .css() gets a color in rgb form but html color picker gives a color in hex former, so we need to convert one of the forms to match the other when comparing colors
       if (rgb2hex($(this).css('background-color')) === color) {
           $(this).css({
               'background-color': 'white'
